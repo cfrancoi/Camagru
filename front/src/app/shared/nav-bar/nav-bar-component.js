@@ -1,9 +1,7 @@
-import "./nav-bar-button/nav-bar-button-conponent.js";
-
 /**
  * Sample Class to learn WebComponent.
  */
-export class NavBar extends HTMLElement
+class NavBar extends HTMLElement
 {
     constructor() {
         super();
@@ -15,7 +13,7 @@ export class NavBar extends HTMLElement
     }
 
     set title(newValue) {
-        this.setAttribute("title");
+        this.setAttribute("title", newValue);
     }
 
     static get observedAttributes() {
@@ -47,8 +45,7 @@ export class NavBar extends HTMLElement
         <h1>${this.title}</h1>
         <div> hello world </div>
         <ul>
-            <a class="${this.cssClass}" href="${this.link}">${this.name}</a>
-            <li><a href="index.html">News</a></li>
+            <nav-bar-button class="" link="index.html" nam="name"></nav-bar-button>
             <li><a href="index.html">Contact</a></li>
             <li><a href="index.html">About</a></li>
         </ul>
