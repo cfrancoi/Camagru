@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+     - "db"
+
+  front:
+    build: ../front/docker/
+    restart: always
+    volumes:
+      - ../front/src/app:/var/www
+#    depends_on:
+#      - "back"
+    environment:
+      BUILD: "prod"
+    
+  # back:
+  #   build: ./back
+  #   restart: always
+  #   volumes:
+  #     - ./front/vol/app:/var/app
+  #   ports:
+  #     - 4000:4000
+  #   expose:
+  #     - 4000:4000
+  #   depends_on:
+  #     - "db"
+
+  proxy:
+    build: ../proxy/docker
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+#     - "back"
+      - "front"
+      - "db"
