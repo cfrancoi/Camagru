@@ -13,3 +13,5 @@
 * [Controllers](https://www.baeldung.com/spring-controller-vs-restcontroller)
 * [Integration testing](https://en.wikipedia.org/wiki/Integration_testing)
 * [Controller Intregation test with MockMvc](https://www.baeldung.com/integration-testing-in-spring)
+### todo
+* [auto generated getter/setter using lombok](https://www.baeldung.com/intro-to-project-lombok)
