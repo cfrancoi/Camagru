@@ -10,3 +10,4 @@ Create a simple Instagram-like platform with an authentication system, basic use
 * Front: html/css/js host by nginx
 * DB: postgreSql
 * The project uses Docker and docker-compose for orchestration.
+
