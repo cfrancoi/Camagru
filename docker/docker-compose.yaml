@@ -4,6 +4,8 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: example
+    #TODO: add a volume for persistent database
+    #TODO: later add a dump to start with minimal data
 
   adminer:
     image: adminer

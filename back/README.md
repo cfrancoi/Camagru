@@ -15,3 +15,4 @@
 * [Controller Intregation test with MockMvc](https://www.baeldung.com/integration-testing-in-spring)
 ### todo
 * [auto generated getter/setter using lombok](https://www.baeldung.com/intro-to-project-lombok)
+* [auto generated mapper using mapstruct](https://mapstruct.org/)]

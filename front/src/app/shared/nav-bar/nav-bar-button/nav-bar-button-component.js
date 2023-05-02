@@ -1,7 +1,7 @@
 /**
  * Sample Class to learn WebComponent.
  */
-class NavBarButton extends HTMLElement
+export class NavBarButton extends HTMLElement
 {
     constructor() {
         super();
@@ -48,8 +48,3 @@ class NavBarButton extends HTMLElement
         `;
     }
 }
-
-/** 
- * define a customer html Element here `<app-nav-bar></app-nav-bar>`
- */
-customElements.define('nav-bar-button', NavBarButton);

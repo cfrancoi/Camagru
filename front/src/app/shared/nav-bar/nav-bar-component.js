@@ -1,3 +1,5 @@
+import { checkLogin } from "../auth/auth-utils.js";
+import { NavBarButton } from "./nav-bar-button/nav-bar-button-component.js";
 /**
  * Sample Class to learn WebComponent.
  */
@@ -6,6 +8,7 @@ class NavBar extends HTMLElement
     constructor() {
         super();
         this.attachShadow({ mode: "open" })
+        checkLogin();
     }
 
     get title() {
@@ -58,3 +61,5 @@ class NavBar extends HTMLElement
  * define a customer html Element here `<app-nav-bar></app-nav-bar>`
  */
 customElements.define('app-nav-bar', NavBar);
+
+customElements.define('nav-bar-button', NavBarButton);
