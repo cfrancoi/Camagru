@@ -18,22 +18,22 @@ services:
     restart: always
     volumes:
       - ../front/src/app:/var/www
-#    depends_on:
-#      - "back"
+    depends_on:
+      - "back"
     environment:
       BUILD: "prod"
     
-  # back:
-  #   build: ./back
-  #   restart: always
-  #   volumes:
-  #     - ./front/vol/app:/var/app
-  #   ports:
-  #     - 4000:4000
-  #   expose:
-  #     - 4000:4000
-  #   depends_on:
-  #     - "db"
+  back:
+    build: ../back/docker
+    restart: always
+    volumes:
+      - ../back/app:/app
+    ports:
+      - 3000:3000
+    expose:
+      - 3000:3000
+    depends_on:
+      - "db"
 
   proxy:
     build: ../proxy/docker
