@@ -11,6 +11,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Role extends AbstractEntity<Long> {
+
     @Column(name = "name", nullable = false)
     private String name;
+    
 }

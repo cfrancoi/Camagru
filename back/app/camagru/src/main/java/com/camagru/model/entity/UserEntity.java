@@ -21,7 +21,13 @@ import lombok.Setter;
 @Table(name = "users")
 @Getter
 @Setter
-public class User extends AbstractEntity<Long> {
+public class UserEntity extends AbstractEntity<Long> {
+
+    @Column(name = "username", nullable = false)
+    private String username;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;

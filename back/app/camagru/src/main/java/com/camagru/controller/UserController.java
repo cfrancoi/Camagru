@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.camagru.model.entity.User;
+import com.camagru.model.entity.UserEntity;
+import com.camagru.model.entity.UserEntity;
 import com.camagru.service.UserService;
 
 @RestController()
@@ -22,7 +23,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping()
-    public List<User> getAll() {
+    public List<UserEntity> getAll() {
         return userService.getAllUsers();
     }
 
@@ -32,8 +33,8 @@ public class UserController {
     }
 
     @PostMapping()
-    public User create() {
-        return userService.createUser(new User());
+    public UserEntity create() {
+        return userService.createUser(new UserEntity());
     }
     
 }
